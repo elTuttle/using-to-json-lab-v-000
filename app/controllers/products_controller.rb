@@ -30,12 +30,7 @@ class ProductsController < ApplicationController
                               include: [author: { only: [:name]}]) }
     end
   end
-
-  def data
-    product = Product.find(params[:id])
-    render json: product.to_json
-  end
-
+  
   private
 
   def product_params
